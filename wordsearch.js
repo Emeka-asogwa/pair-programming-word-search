@@ -2,9 +2,11 @@ const wordSearch = (letters, word) => {
   //Transposing Array for vertical search
   const verticalArr = [];
 
-  for (let row in letters[0]) {
+  
+  for (let row = 0; row < letters[0].length; row++) {
+    //console.log(letters[0]);
     let tmpArr = [];
-    for (let column in letters) {
+    for (let column = 0; column < letters.length; column++) {
       tmpArr.push(letters[column][row]);
     }
     verticalArr.push(tmpArr);
